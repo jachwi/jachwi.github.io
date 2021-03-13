@@ -187,7 +187,24 @@
 										<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
 									</div>
 									<ul class="actions align-center">
-										<li><input value="점검중" class="button special" type="submit"></li>
+										<li><input value="점검중" class="button special" type="submit" onclick="postFormData();"></li>
+										<script>
+function postFormData (){
+    var name = document.getElementById("name").value;
+    var memo = document.getElementById("memo").value;
+    $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbzYocWLtxFlRhOv72w-TiJAWdYLiPM2G3OlH1ol_CInCQ2ANyRKGntgexsiPOmrVws_/exec", 
+        data: { 
+            name: name+"", 
+            memo: memo+"" 
+            
+        }, 
+        type: "POST", 
+        success:function(){ 
+            alert("등록되었습니다.\n감사합니다."); 
+        } }); 
+} 
+</script>
                                                                          </ul>
 								</form>
 							</div>
