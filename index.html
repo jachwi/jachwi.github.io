@@ -185,10 +185,15 @@
 									<div class="field">
 										<label for="message">입력란</label>
 										<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-									</div>
-									<ul class="actions align-center">
-										<li><input value="점검중" class="button special" type="submit" onclick="postFormData();"></li>
-										<script>
+										<div>
+		<tr>
+		
+		    <td colspan=2 align=center>
+			<input type="button" value="등록 (버튼을 누르고 3 초만 기다려주세요 ^^)" onclick="postFormData();">
+			</td>
+		</tr>
+											</div>
+	</table>
 function postFormData (){
     var name = document.getElementById("name").value;
     var memo = document.getElementById("memo").value;
